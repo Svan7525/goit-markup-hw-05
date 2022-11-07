@@ -25,7 +25,6 @@ body {
   background-color: var(--background-section-color);
   font-family: var(--primary-font-family);
   font-size: 14px;
-  line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
@@ -331,7 +330,13 @@ button {
   position: relative;
 }
 
-.work-overley {
+.work-overlay-txt {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -341,18 +346,6 @@ button {
   background: rgba(47, 48, 58, 0.8);
   position: absolute;
   bottom: 0;
-
-}
-
-.work-overlay-txt {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  /* text-align: center; */
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-
-  color: #FFFFFF;
 }
 
 /* team */
@@ -481,7 +474,8 @@ button {
 
 }
 
-.clients-link:hover {
+.clients-link:hover,
+.clients-link:focus {
   color: #2196F3;
 }
 
@@ -668,10 +662,11 @@ footer {
   transform: translateY(101%);
   backdrop-filter: blur(2px);
   transition: transform var(--trns);
-  outline: 1px solid tomato;
+  /* outline: 1px solid tomato; */
 }
 
-.works-link:hover .overlay {
+.works-link:hover .overlay,
+.works-link:focus .overlay {
   transform: translateY(0);
 }
 
